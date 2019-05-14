@@ -14,11 +14,11 @@ var sarah = new staffMember("Sarah", 20);
 var cashRegister = {
   total:0,
   lastTransactionAmount: 0,
-  add: function(itemCost || 0){
+  add: function(itemCost){
     this.total += itemCost;
     this.lastTransactionAmount = itemCost;
   },
-
+  
   scan: function(item, quantity) {
     switch(item) {
       case "eggs":
@@ -40,6 +40,7 @@ var cashRegister = {
     }
     return true;
   },
+  
   //Add voidLastTransaction method
   voidLastTransaction: function(){
     this.total -= this.lastTransactionAmount;
