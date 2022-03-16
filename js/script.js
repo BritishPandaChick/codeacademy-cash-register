@@ -14,8 +14,8 @@ var sarah = new staffMember("Sarah", 20);
 var cashRegister = {
   total:0,
   lastTransactionAmount: 0,
-  add: function(itemCost || 0){
-    this.total += itemCost;
+  add: function(itemCost) {
+    this.total += (itemCost || 0);
     this.lastTransactionAmount = itemCost;
   },
 
@@ -54,10 +54,12 @@ var cashRegister = {
 //Scan eggs and magazines
 cashRegister.scan("eggs", 1);
 //cashRegister.scan("eggs");
+
 cashRegister.scan("milk", 1);
 cashRegister.scan("magazine", 1);
 //cashRegister.scan("magazine");
 //cashRegister.scan("magazine");
+
 cashRegister.scan("chocolate", 4);
 
 //Apply staff discount to object
